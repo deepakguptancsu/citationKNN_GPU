@@ -15,9 +15,9 @@ Its uses are diverse, like:
 CitationKNN's useability and effectiveness makes it popular. However, it involves very high data intensive calculations, which makes it a suitable candidate for parallelization.
 
 Code Architecture for serial code (citationKNN.cpp):
-dataReader.cpp - provide interfaces to read the input dataset in testDataSet datastructure  
-calHousdroffDist() - then calculates the housdroff distances between individual bags
-calClassLabel() - then calculates the citors and references of query bag, which further helps in calculating class label
+- dataReader.cpp: provide interfaces to read the input dataset in testDataSet datastructure  
+- calHousdroffDist(): then calculates the housdroff distances between individual bags
+- calClassLabel(): then calculates the citors and references of query bag, which further helps in calculating class label
 
 This project parallelizes CitationKNN on GPU using CUDA. Parallelized sections include (in citationKNN_cuda.cu):
 - calculating eucledian distances between individual instances
